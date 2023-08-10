@@ -1,0 +1,517 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+
+.logoo {
+    background-size: cover;
+    background-image: url('img/logoo.png');
+    position: static;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 420px;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1rem;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    position: fixed;
+    background: transparent;
+    transition: all .35s ease;
+    background-color: #fff;
+    padding: 14px 14%;
+}
+
+
+.logo {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.cabeçalho-link {
+    display: flex;
+    gap: 3rem;
+    height: 20px;
+
+
+}
+
+.cabeçalho-link a {
+    color: #111;
+    font-weight: 700;
+    transition: 0.3s;
+
+}
+
+.cabeçalho-link a:hover {
+
+    color: #ab96ce;
+    border-top: 2px solid #ab96ce;
+    border-bottom: 2px solid #ab96ce;
+
+}
+
+
+.icon span {
+    font-size: 2rem;
+    cursor: pointer;
+
+}
+
+.icon span:hover {
+    color: #ab96ce;
+
+}
+
+.Meio {
+
+    padding: 3rem 0 0 2.5rem;
+    height: 30rem;
+    line-height: 3rem;
+    padding-top: 10%;
+
+}
+
+.Meio h1 {
+    font-size: 3rem;
+
+}
+
+.Meio button {
+    background-color: black;
+    padding: 1rem 3rem 1rem 3rem;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.Meio button:hover {
+    background-color: #1ed760;
+    transform: scaleY(1.1);
+}
+
+section {
+    padding-top: 7rem;
+    display: flex;
+    flex-direction: row;
+}
+
+section h1 {
+    align-items: center;
+    text-align: center;
+    font-size: 2rem;
+
+}
+
+.Container-card-1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+    padding-top: 2rem;
+
+}
+
+.cards img {
+    width: 300px;
+    height: auto;
+    transition: 0.35s ease;
+
+}
+
+.cards img:hover {
+    transform: scale(0.9) translateY(-5px);
+    cursor: pointer;
+
+
+}
+
+.cta {
+    height: 60vh;
+    width: 100%;
+    background: url(../img/ffffc.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.text-cta {
+    padding-left: 5rem;
+}
+
+.text-cta h6 {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: .6px;
+    margin-bottom: 14px;
+
+}
+
+.text-cta h4 {
+    font-size: 3.3rem;
+    line-height: 1.2;
+    letter-spacing: .6rem;
+    margin-bottom: 30px;
+}
+
+.text-cta a {
+    background-color: #c8815f;
+    padding: 1rem 3rem 1rem 3rem;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.text-cta a:hover {
+    background-color: #111;
+    transform: scaleY(1.2);
+
+}
+
+.Container-roupas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+    margin-top: 3rem;
+
+}
+
+.Container-roupas img:hover {
+    transform: scale(0.9) translateY(-5px);
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+.roupa img {
+    width: 250px;
+    height: auto;
+}
+
+.roupa {
+    background-color: #c8815f;
+    color: #000;
+}
+
+.Marcas {
+    margin-top: 10rem;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+}
+
+.Marcas img {
+    width: 180px;
+    height: auto;
+    background-color: aliceblue;
+}
+
+#Contato {
+    display: flex;
+    gap: 5rem;
+    justify-content: space-around;
+    background-color: #111;
+    padding: 8rem;
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+}
+
+.meio-contato h3 {
+    color: #fff;
+    font-size: 23px;
+    margin-bottom: 1.6rem;
+}
+
+.meio-contato h5 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #555;
+}
+
+.meio-contato li {
+    margin-bottom: 15px;
+}
+
+.meio-contato li a {
+    display: block;
+    color: #555;
+    font-weight: 600;
+    transition: all .35s ease;
+}
+
+.last-text {
+    text-align: center;
+    background-color: #555;
+    color: #fff;
+}
+
+header input {
+    width: 300px;
+    height: 4vh;
+
+    border-radius: 10px;
+
+}
+
+.pesquisar {
+    width: 300px;
+    position: relative;
+}
+
+.pesquisar2 {
+    right: 10px;
+    position: absolute;
+    bottom: 0;
+}
+.pessoaicon {
+    width: 30px;height: 30px;
+}
+
+:root{
+    /* color type A */
+    --line_color : #000000 ;
+    --back_color : #1ed760;  ;
+
+    /* color type B */
+    /* --line_color : #1b1919 ;
+    --back_color : #E9ECFF  ; */
+
+    /* color type C */
+    /* --line_color : #00135C ;
+    --back_color : #DEFFFA  ; */
+}
+
+
+.button{
+    position : relative ;
+    z-index : 0 ;
+    width : 240px ;
+    height : 56px ;
+    text-decoration : none ;
+    font-size : 14px ; 
+    font-weight : bold ;
+    color : var(--line_color) ;
+    letter-spacing : 2px ;
+    transition : all .3s ease ;
+}
+.button__text{
+    display : flex ;
+    justify-content : center ;
+    align-items : center ;
+    width : 100% ;
+    height : 100% ;
+}
+.button::before,
+.button::after,
+.button__text::before,
+.button__text::after{
+    content : '' ;
+    position : absolute ;
+    height : 3px ;
+    border-radius : 2px ;
+    background : var(--line_color) ;
+    transition : all .5s ease ;
+}
+.button::before{
+    top : 0 ;
+    left : 54px ;
+    width : calc( 100% - 56px * 2 - 16px ) ;
+}
+.button::after{
+    top : 0 ;
+    right : 54px ;
+    width : 8px ;
+}
+.button__text::before{
+    bottom : 0 ;
+    right : 54px ;
+    width : calc( 100% - 56px * 2 - 16px ) ;
+}
+.button__text::after{
+    bottom : 0 ;
+    left : 54px ;
+    width : 8px ;
+}
+.button__line{
+    position : absolute ;
+    top : 0 ;
+    width :70px ;
+    height : 100% ;
+    overflow : hidden ;
+}
+.button__line::before{
+    content : '' ;
+    position : absolute ;
+    top : 0 ;
+    width : 150% ;
+    height : 100% ;
+    box-sizing : border-box ;
+    border-radius : 400px ;
+    border : solid 3px var(--line_color) ;
+}
+.button__line:nth-child(1),
+.button__line:nth-child(1)::before{
+    left : 0 ;
+}
+.button__line:nth-child(2),
+.button__line:nth-child(2)::before{
+    right : 0 ;
+}
+.button:hover{
+    letter-spacing : 6px ;
+}
+.button:hover::before,
+.button:hover .button__text::before{
+    width : 8px ;
+}
+.button:hover::after,
+.button:hover .button__text::after{
+    width : calc( 100% - 56px * 2 - 16px ) ;
+}
+.button__drow1,
+.button__drow2{
+    position : absolute ;
+    z-index : -1 ;
+    border-radius : 16px ;
+    transform-origin : 16px 16px ;
+}
+.button__drow1{
+    top : -16px ;
+    left : 40px ;
+    width : 32px ;
+    height : 0;
+    transform : rotate( 30deg ) ;
+}
+
+.button__drow1::before,
+.button__drow1::after,
+.button__drow2::before,
+.button__drow2::after{
+    content : '' ;
+    position : absolute ;
+}
+.button__drow1::before{
+    bottom : 0 ;
+    left : 0 ;
+    width : 0 ;
+    height : 32px ;
+    border-radius : 16px ;
+    transform-origin : 16px 16px ;
+    transform : rotate( -60deg ) ;
+}
+.button__drow1::after{
+    top : -10px ;
+    left : 45px ;
+    width : 0 ;
+    height : 32px ;
+    border-radius : 16px ;
+    transform-origin : 16px 16px ;
+    transform : rotate( 69deg ) ;
+}
+.button__drow2::before{
+    bottom : 0 ;
+    left : 0 ;
+    width : 0 ;
+    height : 32px ;
+    border-radius : 16px ;
+    transform-origin : 8px 8px ;
+    transform : rotate( -146deg ) ;
+}
+.button__drow2::after{
+    bottom : 26px ;
+    left : -40px ;
+    width : 0 ;
+    height : 32px ;
+    border-radius : 16px ;
+    transform-origin : 16px 16px ;
+    transform : rotate( -262deg ) ;
+}
+.button__drow1,
+.button__drow1::before,
+.button__drow1::after,
+.button__drow2,
+.button__drow2::before,
+.button__drow2::after{
+    background : var( --back_color ) ;
+}
+.button:hover .button__drow1{
+    animation : drow1 ease-in .06s ;
+    animation-fill-mode : forwards ;
+}
+.button:hover .button__drow1::before{
+    animation : drow2 linear .08s .06s ;
+    animation-fill-mode : forwards ;
+}
+.button:hover .button__drow1::after{
+    animation : drow3 linear .03s .14s ;
+    animation-fill-mode : forwards ;
+}
+.button:hover .button__drow2{
+    animation : drow4 linear .06s .2s ;
+    animation-fill-mode : forwards ;
+}
+.button:hover .button__drow2::before{
+    animation : drow3 linear .03s .26s ;
+    animation-fill-mode : forwards ;
+}
+.button:hover .button__drow2::after{
+    animation : drow5 linear .06s .32s ;
+    animation-fill-mode : forwards ;
+}
+@keyframes drow1{
+    0%   { height : 0 ; }
+    100% { height : 100px ; }
+}
+@keyframes drow2{
+    0%   { width : 0 ; opacity : 0 ;}
+    10%  { opacity : 0 ;}
+    11%  { opacity : 1 ;}
+    100% { width : 120px ; }
+}
+@keyframes drow3{
+    0%   { width : 0 ; }
+    100% { width : 80px ; }
+}
+@keyframes drow4{
+    0%   { height : 0 ; }
+    100% { height : 120px ; }
+}
+@keyframes drow5{
+    0%   { width : 0 ; }
+    100% { width : 124px ; }
+}
+
+
+.btn-container{
+    width : 10vw ;
+    height : 5vh ;
+  
+  
+}
