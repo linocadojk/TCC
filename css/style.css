@@ -11,7 +11,7 @@
 
 .logoo {
     background-size: cover;
-    background-image: url('img/logoo.png');
+    background-image: url('/img/logoo.png');
     position: static;
     width: 100%;
     background-repeat: no-repeat;
@@ -514,4 +514,9 @@ header input {
     height : 5vh ;
   
   
+}
+.col:hover{
+    color: red;
+    fill: red;
+ 
 }
