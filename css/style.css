@@ -8,6 +8,11 @@
 
 }
 
+body{
+    overflow-x: hidden;
+    
+
+}
 
 .logoo {
     background-size: cover;
@@ -17,7 +22,37 @@
     background-repeat: no-repeat;
     height: 420px;
 
+
 }
+
+
+
+.seta{
+    width: 300px;
+    height: 300px;
+
+   
+  
+}
+.seta-link{
+    position: absolute;
+}
+.seta-link:first-child{
+    position:absolute; 
+    left:0;
+    transform: rotate(180deg);
+}
+.seta-link:last-child{
+    position:absolute; 
+    right:0;
+}
+
+.seta:nth-child(2){
+    top: 0;
+    right: 0;
+    
+}
+
 
 header {
     display: flex;
@@ -147,7 +182,7 @@ section h1 {
 .cta {
     height: 60vh;
     width: 100%;
-    background: url(../img/ffffc.png);
+    background: url(../img/fundo1.png);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -347,6 +382,7 @@ svg {
 
     width: 200%;
     display: flex;
+    position: relative;
 
 }
 .test {
