@@ -10,17 +10,19 @@
 
 body{
     overflow-x: hidden;
-    
+ 
+        
 
 }
 
 .logoo {
     background-size: cover;
-    background-image: url('/img/logoo.png');
+    background-image: url('../img/logoo.png');
     position: static;
     width: 50%;
     background-repeat: no-repeat;
     height: 420px;
+    overflow: hidden;
 
 
 }
@@ -34,23 +36,17 @@ body{
    
   
 }
-.seta-link{
-    position: absolute;
-}
-.seta-link:first-child{
-    position:absolute; 
-    left:0;
-    transform: rotate(180deg);
-}
-.seta-link:last-child{
-    position:absolute; 
-    right:0;
+.prev, .next {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #1db954;
+    color: #fff;
+    border: none;
+    margin: 0 10px;
 }
 
-.seta:nth-child(2){
-    top: 0;
-    right: 0;
-    
+.prev:hover, .next:hover {
+    background-color: #0f813d;
 }
 
 
@@ -79,8 +75,9 @@ header {
 
 .cabeçalho-link {
     display: flex;
-    gap: 3rem;
+    gap: 2.5rem;
     height: 20px;
+    margin-right: 20px;
 
 
 }
@@ -91,6 +88,7 @@ header {
     transition: 0.3s;
 
 }
+
 
 .cabeçalho-link a:hover {
 
@@ -126,17 +124,94 @@ header {
 
 }
 
-.Meio button {
-    background-color: black;
-    padding: 1rem 3rem 1rem 3rem;
+html, body {
+    height: 100%;
+  }
+  
+  .wrap {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btnspo {
+    min-width: 150px;
+    min-height: 50px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #000;
+    background: linear-gradient(90deg, #ab96ce(129,230,217,1) 0%,#ab96ce(79,209,197,1) 100%);
     border: none;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: 0.3s;
+    border-radius: 100px;
 
-}
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    }
+  
+  .btnspo::before {
+  content: '';
+    border-radius: 200px;
+    min-width: calc(70px + 14px);
+    min-height: calc(30px + 4px);
+   
+    box-shadow: 0 0 60px#ab96ce(0,255,30,.4);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .3s ease-in-out 0s;
+    
+  }
+  
+  .btnspo:hover, .button:focus {
+    color: #ffffff;
+    transform: translateY(-6px);
+    min-width: 150px;
+    min-height: 50px;
+  }
+  
+  .btnspo:hover::before, button:focus::before {
+    opacity: 1;
+  }
+  
+  .btnspo::after {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 100%;
+    border: 6px solid #ab96ce;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+    
+  }
+  
+  .btnspo:hover::after, button:focus::after {
+    animation: none;
+    display: none;
+  }
+  
+  @keyframes ring {
+    0% {
+      width: 30px;
+      height: 30px;
+      opacity: 1;
+    }
+    100% {
+      width: 300px;
+      height: 300px;
+      opacity: 0;
+    }
+  }
 
 .Meio button:hover {
     background-color: #1ed760;
@@ -144,13 +219,25 @@ header {
 }
 
 section {
+ 
+    display: flex;
+    flex-direction: row;
+   
+    flex-wrap: wrap;
+}
+.second{
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     padding-top: 7rem;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
-section h1 {
+.tituloh1 {
     align-items: center;
+    flex-basis: 100%;
     text-align: center;
     font-size: 2rem;
 
@@ -160,7 +247,6 @@ section h1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-   
     padding-top: 2rem;
 
 }
@@ -168,6 +254,7 @@ section h1 {
 .cards img {
     width: 300px;
     height: auto;
+    margin: 3px;
     transition: 0.35s ease;
 
 }
@@ -210,7 +297,7 @@ section h1 {
 }
 
 .text-cta a {
-    background-color: #c8815f;
+    background-color: #ab96ce;
     padding: 1rem 3rem 1rem 3rem;
     border: none;
     border-radius: 5px;
@@ -246,11 +333,11 @@ section h1 {
 
 .roupa img {
     width: 250px;
-    height: auto;
+    height:270px;
 }
 
 .roupa {
-    background-color: #c8815f;
+    background-color: #ab96ce;
     color: #000;
 }
 
@@ -271,7 +358,7 @@ section h1 {
     display: flex;
     gap: 5rem;
     justify-content: space-around;
-    background-color: #111;
+    background-color: #4b4b4b;
     padding: 8rem;
     margin-top: 5rem;
     display: grid;
@@ -313,6 +400,7 @@ header input {
 
     border-radius: 10px;
 
+
 }
 
 .pesquisar {
@@ -327,60 +415,25 @@ header input {
 }
 .pessoaicon {
     width: 30px;height: 30px;
+    color: black;
+}
+.pessoaicon:hover {
+    color: #ab96ce;
+    fill: #ab96ce;
+   
 }
 
 
 .col:hover{
-    color: red;
-    fill: red;
+    color: #ab96ce;
+    fill: #ab96ce;
  
 }
 
-@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
-
-
-
-
-
-.btnspo {
-  width: 170px;
-  height: 50px;
-  cursor: pointer;
-  background: transparent;
-  border: 1px solid #000000;
-  outline: none;
-  transition: 1s ease-in-out;
-}
-
-svg {
-  position: absolute;
-  left: 0;
-  top: 0;
-  fill: none;
-  stroke: #fff;
-  stroke-dasharray:  480;
-  stroke-dashoffset: 400;
-  transition: 1s ease-in-out;
-}
-
-.btnspo:hover {
-  transition: 1s ease-in-out;
-  background: #4F95DA;
-}
-
-.btnspo:hover svg {
-  stroke-dashoffset: -480;
-}
-
-.btnspo span {
-  color: white;
-  font-size: 18px;
-  font-weight: 100;
-}
 
 .carusel{
 
-    width: 200%;
+    width: 300%;
     display: flex;
     position: relative;
 
@@ -394,3 +447,20 @@ svg {
     height: 420px;
 
 }
+
+.backlogin {
+    background-image: lo
+}
+
+
+.carousel-slide {
+   
+    transition: transform 3s ease-in-out; /* Adiciona transição suave de 0.3 segundos */
+  }
+  
+  .carousel-item {
+    
+    transition: opacity 0.3s ease-in-out; /* Adiciona transição suave de opacidade */
+ 
+  }
+  
