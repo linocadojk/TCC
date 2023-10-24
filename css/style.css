@@ -7,6 +7,7 @@
     list-style: none;
 
 }
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 body{
     overflow-x: hidden;
@@ -64,9 +65,25 @@ header {
     background: transparent;
     transition: all .35s ease;
     background-color: #fff;
-    padding: 14px 14px;
+ 
+    animation: 1s ease-out 0s 1 slideInLeft;   padding: 14px 14px;
 }
-
+@keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 
 .logo {
     font-weight: 500;
@@ -86,6 +103,7 @@ header {
     color: #111;
     font-weight: 700;
     transition: 0.3s;
+    text-decoration: none;
 
 }
 
@@ -102,6 +120,7 @@ header {
 .icon span {
     font-size: 2rem;
     cursor: pointer;
+    color: #ab96ce;
 
 }
 
@@ -115,6 +134,7 @@ header {
     padding: 3rem 0 0 2.5rem;
     height: 30rem;
     line-height: 3rem;
+    position: relative;
     padding-top: 10%;
 
 }
@@ -143,7 +163,7 @@ html, body {
     text-transform: uppercase;
     font-weight: 700;
     color: #000;
-    background: linear-gradient(90deg, #ab96ce(129,230,217,1) 0%,#ab96ce(79,209,197,1) 100%);
+    background: linear-gradient(90deg, #8a6db8(129,230,217,1) 0%,#ab96ce(79,209,197,1) 100%);
     border: none;
     border-radius: 100px;
 
@@ -170,14 +190,14 @@ html, body {
     
   }
   
-  .btnspo:hover, .button:focus {
+  .btnspo:active, .button:focus {
     color: #ffffff;
     transform: translateY(-6px);
     min-width: 150px;
     min-height: 50px;
   }
   
-  .btnspo:hover::before, button:focus::before {
+  .btnspo:active::before, button:focus::before {
     opacity: 1;
   }
   
@@ -195,7 +215,7 @@ html, body {
     
   }
   
-  .btnspo:hover::after, button:focus::after {
+  .btnspo:active::after, button:focus::after {
     animation: none;
     display: none;
   }
@@ -213,7 +233,7 @@ html, body {
     }
   }
 
-.Meio button:hover {
+.Meio button:active {
     background-color: #1ed760;
     transform: scaleY(1.1);
 }
@@ -225,6 +245,7 @@ section {
     justify-content: center;
    
     flex-wrap: wrap;
+
 }
 .second{
     align-items: center;
@@ -249,8 +270,12 @@ section {
     justify-content: center;
     flex-wrap: wrap;
     padding-top: 2rem;
+ 
+    
 
 }
+
+
 
 .cards img {
     width: 300px;
@@ -264,7 +289,6 @@ section {
     transform: scale(0.9) translateY(-5px);
     cursor: pointer;
 
-
 }
 
 .cta {
@@ -272,14 +296,17 @@ section {
     width: 100%;
     background: url(../img/fundo1.png);
     background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
+
+    display: flex;  position: relative;
     margin-top: 5rem;
+
+    animation: 3s ease-out 0.5s 1 slideInLeft;
 }
 
 .text-cta {
     padding-left: 5rem;
+    position:absolute;
+    left: 0;
 }
 
 .text-cta h6 {
@@ -295,6 +322,7 @@ section {
     line-height: 1.2;
     letter-spacing: .6rem;
     margin-bottom: 30px;
+    margin-top: 100px;
 }
 
 .text-cta a {
@@ -432,6 +460,27 @@ header input {
 }
 
 
+.col{
+    color: #000000;
+  
+ 
+}
+
+
+.col:hover{
+    color: #ab96ce;
+    fill: #ab96ce;
+ 
+}
+
+
+.col:hover{
+    color: #ab96ce;
+    fill: #ab96ce;
+ 
+}
+
+
 .carusel{
 
     width: 300%;
@@ -441,7 +490,7 @@ header input {
 }
 .test {
     background-size: cover;
-    background-image: url('/img/jeon.jpg');
+    background-image: url(../img/jeon.jpg);
     position: static;
     width: 50%;
     background-repeat: no-repeat;
@@ -465,3 +514,39 @@ header input {
  
   }
   
+.textoagradecimento {
+    color: #1db954;
+    text-align: cen;
+}
+
+.imagemsobre{
+    size: 40px;
+}
+.carousel-item{
+    position: relative;
+    width: 100%;
+    height: 500px;
+
+}
+
+.carousel-content{
+
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 3;
+
+
+
+}
+
+.carousel-control-next-icon{
+    color: black;
+}
+
+.produto-info{
+    display: flex;
+    justify-content: space-around;
+   margin: 10px 30px 0 30px;
+    text-align: center;
+}

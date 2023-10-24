@@ -1,0 +1,138 @@
+
+  <!-- Adicione o SDK do Spotify Web Playback no seu HTML -->
+
+<style>
+/* Estilo para o botão "Play" */
+body{
+ max-height: 300px;
+}
+#play {
+  background-color: #1DB954;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilo para o botão "Pause" */
+#pause {
+  background-color: #D62D20;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilo para o botão "Next" */
+#next {
+  background-color: #535353;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilo para o contêiner de informações da música */
+#track-info {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #f7f7f7;
+}
+
+/* Estilo para a imagem da capa do álbum */
+#track-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Adicione outros estilos conforme necessário */
+
+
+</style>
+  <h1>Spotify Player</h1>
+
+ 
+  <div id="track-info">
+    <h2>Informações da Música:</h2>
+    <p id="track-name"></p>
+    <p id="track-artists"></p>
+    <p id="track-genres"></p>
+    <h1>Nome da Música: <%= name %></h1>
+    <img src="<%= imageUrl %>" id="track-image" alt="Capa do Álbum">
+  </div>
+  <button id="play">Play</button>
+  <button id="pause">Pause</button>
+  <button id="next">Next</button>
+  <button id="info">Obter Informações da Música</button>
+
+  <script src="https://sdk.scdn.co/spotify-player.js"></script>
+  <script>
+    window.onSpotifyWebPlaybackSDKReady = () => {
+      const token = new URLSearchParams(window.location.search).get('token');
+
+      const player = new Spotify.Player({
+        name: 'Meu Reprodutor',
+        getOAuthToken: cb => { cb(token); }
+      });
+
+      // Conectar-se ao reprodutor
+      player.connect().then(success => {
+        if (success) {
+          console.log('Conectado ao Spotify Web Playback SDK');
+        }
+      });
+
+      document.getElementById('play').addEventListener('click', () => {
+        // Chame o método de resume() para reproduzir a música
+        fetch('/play', { method: 'POST' })
+          .then(response => response.text())
+          .then(message => {
+            console.log(message); // Exiba a mensagem da resposta no console
+          })
+          .catch(error => {
+            console.error('Erro ao p a música:', error);
+          });
+      });
+
+
+      document.getElementById('pause').addEventListener('click', () => {
+        // Chame o método de pause() para pausar a música
+        fetch('/pausar', { method: 'POST' })
+          .then(response => response.text())
+          .then(message => {
+            console.log(message); // Exiba a mensagem da resposta no console
+          })
+          .catch(error => {
+            console.error('Erro ao pausar a música:', error);
+          });
+      });
+
+      document.getElementById('next').addEventListener('click', () => {
+        // Chame o método de nextTrack() para avançar para a próxima música
+        fetch('/avancar', { method: 'POST' })
+          .then(response => response.text())
+          .then(message => {
+            console.log(message); // Exiba a mensagem da resposta no console
+          })
+          .catch(error => {
+            console.error('sss:', error);
+          });
+      });
+
+      document.getElementById('info').addEventListener('click', () => {
+        // Use uma requisição AJAX para obter informações da música atual
+        fetch('/info')
+          .then(response => response.json())
+          .then(data => {
+            document.getElementById('track-name').textContent = `Nome da Música: ${data.name}`;
+            document.getElementById('track-artists').textContent = `Artista(s): ${data.artists}`;
+            document.getElementById('track-genres').textContent = `Gêneros: ${data.genres.join(', ')}`;
+            document.getElementById('track-image').src = data.imageUrl;
+          })
+          .catch(error => {
+            console.error('Erro ao obter informações da música:', error);
+          });
+      });
+    };
+  </script>

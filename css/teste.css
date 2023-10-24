@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+body{
+    overflow-x: hidden;
+    height: 100%;
+ 
+        
+
+}
+
+.logoo {
+    background-size: cover;
+    background-image: url('../img/logoo.png');
+    position: static;
+    width: 50%;
+    background-repeat: no-repeat;
+    height: 420px;
+    overflow: hidden;
+
+
+}
+
+
+
+.seta{
+    width: 300px;
+    height: 300px;
+
+   
+  
+}
+.prev, .next {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #1db954;
+    color: #fff;
+    border: none;
+    margin: 0 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: #0f813d;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1rem;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    right: 0;
+  
+    position: absolute;
+    z-index: 90;
+    background:url('../img/fundo1.png');
+    transition: all .35s ease;
+    background-color: #fff;
+    padding: 14px 14px;
+}
+
+
+.logo {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.logo {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.cabeçalho-link {
+    display: flex;
+    gap: 2.5rem;
+    height: 20px;
+    margin-right: 20px;
+
+
+}
+
+.cabeçalho-link a {
+    color: #111;
+    font-weight: 700;
+    transition: 0.3s;
+
+}
+
+
+.cabeçalho-link a:hover {
+
+    color: #ab96ce;
+    border-top: 2px solid #ab96ce;
+    border-bottom: 2px solid #ab96ce;
+
+}
+
+
+.icon span {
+    font-size: 2rem;
+    cursor: pointer;
+
+}
+
+.icon span:hover {
+    color: #ab96ce;
+
+}
+
+p{
+    font-family: 'Indie Flower', cursive;
+
+
+    
+}

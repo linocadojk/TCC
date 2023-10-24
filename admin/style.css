@@ -1,0 +1,203 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+main{
+    display: flex;
+}
+
+section:first-child{
+    flex-basis: 60%;
+
+    height: 400px;
+    position: relative;
+
+   
+}
+section:last-child{
+    flex-basis: 40%;
+   
+    height: auto;
+    margin-top: 10px;
+    margin-top: 30px;
+}
+.imgsecundarias{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 605px;
+    overflow: scroll;
+    width: 20%;
+    scrollbar-width: none;
+    
+}
+
+.imgsecundarias::-webkit-scrollbar {
+    display: none;
+  }
+
+.imgsecundarias img{
+    width: 100%;
+    margin: 10px;
+ 
+}
+.imgprincipal{
+    float: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+    
+}
+.imgprincipal img{
+  width: 95%;
+  height: auto;
+   margin: 10px;
+  height: 600px;
+
+}
+.descricao{
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 20px;
+}
+.nome-produto{
+    font-size: 30PX;
+    padding: 10px;
+   
+}
+.price{
+    display: flex;
+    justify-content: space-between;
+}
+.add-cart{
+ width: 90%;
+ text-align: center;
+ border-radius: 10px;
+ background-color: rgb(187, 115, 187);
+ border-style: none;
+ margin: 5%;
+ height: 5vh;
+ font-size: 3vh;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1rem;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    position: fixed;
+    background: transparent;
+    transition: all .35s ease;
+    background-color: #fff;
+    padding: 14px 14px;
+}
+
+
+.logo {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.cabeçalho-link {
+    display: flex;
+    gap: 2.5rem;
+    height: 20px;
+    margin-right: 20px;
+
+
+}
+
+.cabeçalho-link a {
+    color: #111;
+    font-weight: 700;
+    transition: 0.3s;
+    text-decoration: none;
+
+}
+
+
+.cabeçalho-link a:hover {
+
+    color: #ab96ce;
+    border-top: 2px solid #ab96ce;
+    border-bottom: 2px solid #ab96ce;
+
+}
+
+
+.icon span {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ab96ce;
+
+}
+
+.icon span:hover {
+    color: #ab96ce;
+
+}
+
+header input {
+    width: 300px;
+    height: 4vh;
+
+    border-radius: 10px;
+
+
+}
+
+.pesquisar {
+    width: 300px;
+    position: relative;
+}
+
+.pesquisar2 {
+    right: 10px;
+    position: absolute;
+    bottom: 0;
+}
+.pessoaicon {
+    width: 30px;height: 30px;
+    color: black;
+}
+.pessoaicon:hover {
+    color: #ab96ce;
+    fill: #ab96ce;
+   
+}
+
+
+.col:hover{
+    color: #ab96ce;
+    fill: #ab96ce;
+ 
+}
+
+
+.col{
+    color: #000000;
+  
+ 
+}
+
+
+.col:hover{
+    color: #ab96ce;
+    fill: #ab96ce;
+ 
+}
+
+
+.col:hover{
+    color: #ab96ce;
+    fill: #ab96ce;
+ 
+}
